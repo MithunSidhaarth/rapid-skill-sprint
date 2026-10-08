@@ -23,3 +23,11 @@ Built with the "Motion as Code" starter kit (TypeScript + three.js, pdoom-video 
 1. Drop `sprint.ts` into the kit's `app/src/scenes/` and replace `app/src/timeline.ts` with `timeline.ts` here.
 2. Put the voiceover at `audio/voiceover.mp3`, set `SCRIPT` in `analysis/align_vo.py` to the lines above (and `SPOKEN = {}`), then run the alignment and audio analysis from the kit guide.
 3. `cd app && bun --bun x vite` and `bun scripts/render.ts video --samples auto --min-samples 4 --max-samples 12 --shutter 0.5 --crf 17 --out ../out/sprint-intro.mp4`.
+
+## Reel version (9:16, 1080x1920)
+`sprint-reel.ts` is the same film laid out for Reels/Shorts/TikTok: type stacks vertically, the four dashboard cards swap one at a time, and everything sits inside the safe area. Rendered file: [`assets/reel.mp4`](../assets/reel.mp4).
+1. Apply the small engine patch that adds a `?vertical=1` mode (it only changes the canvas size constants and the renderer's viewport): `patch -p1 < vertical.patch` from the kit's `app/` parent.
+2. Copy `sprint-reel.ts` next to `sprint.ts` and use the `timeline.ts` here (it picks the layout from `?vertical`).
+3. `bun scripts/render.ts video --vertical --samples auto --min-samples 4 --max-samples 12 --shutter 0.5 --crf 17 --out ../out/sprint-reel.mp4`
+
+Note: `bunx vite` can fail on some Node installs; `bun --bun x vite` runs it under bun instead. If another project already uses port 5173, start vite on a free port and pass `--url http://localhost:<port>` to `render.ts`.

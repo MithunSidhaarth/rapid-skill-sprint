@@ -3,7 +3,7 @@
 **Learn any skill to functional competence in 2 hours, inside Claude.**
 A Claude skill that turns Claude into *Coach Sprint*: a sharp, warm coach that plans the sprint, finds the best YouTube videos and real certifications, drills you with feedback, tests you, and tracks everything on a live dashboard. It can talk too, through ElevenLabs.
 
-**[Watch the 15-second intro](assets/intro.mp4)**
+**[Watch the 15-second intro](assets/intro.mp4)** · [vertical reel (9:16)](assets/reel.mp4)
 
 > Two hours will not make you an expert. It gets you past the "incompetent" barrier with a real, observable result and a plan to keep going. The skill says that out loud, and then makes you earn it.
 
