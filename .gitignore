@@ -1,0 +1,5 @@
+references/config.local.md
+*.local.md
+node_modules/
+out/
+.DS_Store
